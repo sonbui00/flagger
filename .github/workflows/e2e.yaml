@@ -41,7 +41,8 @@ jobs:
         with:
           version: v0.18.0
           cluster_name: kind
-          node_image: kindest/node:v1.24.12@sha256:0bdca26bd7fe65c823640b14253ea7bac4baad9336b332c94850f84d8102f873
+          kubectl_version: v1.28.0
+          node_image: kindest/node:v1.28.0@sha256:b7a4cad12c197af3ba43202d3efe03246b3f0793f162afb40a33c923952d5b31
       - name: Build container image
         run: |
           docker build -t test/flagger:latest .
